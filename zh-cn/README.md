@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://docsify.js.org">
-    Project Gaia
+    Omkar Salunke
   </a>
 </h1>
 
