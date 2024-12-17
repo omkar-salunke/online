@@ -1,91 +1,181 @@
+
+
+
 >
-># News (2020 July)
+>## News (2020 July)
 >
-> **No more maintenance for this repo.** 
+>**No more maintenance for this repo.** I have something new for you -->> [Project Titan](https://github.com/szhielelp/NextJS-BlogTemplate-ProjectTitan) <<--
 >
-> I have something new for you: [Project Titan](https://github.com/szhielelp/NextJS-BlogTemplate-ProjectTitan)
+>**Project Titan** is built with **NextJS** x **Material UI** x **Typescript**, with totally same styles as **Project Gaia**.
 >
-> **Project Titan** is built with NextJS x Material UI x Typescript, with SAME styles as Project Gaia.
->
-> You can migrate to Project Titan from Project Gaia seamlessly. You can [build a markdown site with Project Titan in ONLY 5 STEPS](https://titan.szhshp.org/tech/2021/05/30/Document-Main#Try-it-out)
+>You can migrate to **Project Titan** from **Project Gaia** seamlessly.
 >
 >Check below two sites then you can see the differences:
 >
 >- Project Titan: [https://szhshp.org](https://szhshp.org)
->- Project Gaia: [https://szhielelp.github.io/JekyllTheme-ProjectGaia/](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+>- Project Gaia: [https://legacy.szhshp.org](https://legacy.szhshp.org)
+
+<h1 align="center">
+  <a href="https://github.com/szhielelp/JekyllTheme-ProjectGaia">
+    Project Gaia
+  </a>
+</h1>
+
+
+## Demo 
+
+![](    _media/demo/1.png  )
+![](    _media/demo/2.png  )
+![](    _media/demo/3.png  )
+![](    _media/demo/4.png  )
 
 
 
 
+## Usage
+
+1. Fork and give me a star!
+1. `Important`: Please change the `baseurl` value in  `_config.yml` to [your repo name]
 
 
-----------------------
+## Whats New in Version 2.0?
 
-# Project Gaia
+1. New sidebar design 
+1. New category page design
+1. New code highlighter
+1. Animations
+2. SCSS + ES6
 
+## Blog Plugins
 
-<div align=center><img src="/img/logo.png"/></div>
+### Stickie Post
 
+Put a attribute `stickie: true` in YAML header for specific post:
 
-<p align="center">
-  <img src="https://img.shields.io/badge/link-996.icu-red.svg"/>
-  <img src="https://img.shields.io/badge/license-Anti%20996-blue.svg"/>
-  <img src="https://img.shields.io/badge/License-MIT-orange"/>
-  <img src="https://img.shields.io/badge/Version-2.0-green"/>
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/szhielelp/JekyllTheme-ProjectGaia">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/szhielelp/JekyllTheme-ProjectGaia">
-</p>
+```js
+layout: post
+title: blablablalala
+category : Comic
+tags : [Comic, 10101]
+stickie: true 
+```
 
-
-
-                                                                                                                                         
-
-## Documents
-
-- [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-- [Documents](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs)
+Then current post will show ahead of other posts.
 
 
+![]( _media/post/stickyPost.png )
+
+
+### Comments Plugin
+
+Change the content in `_includes/comment-full.html`, then all post pages will have a comment plugin.
+
+## Post Plugins
+
+You could active/deactive all plugins in `js/post.js`
+
+```javascript
+    let config = {
+      activeHighlight: true,
+      activeHeaderCollapse: true,
+      activeHeaderNumber: true,
+      activeLightbox: true,
+      activeReadingProgressBar: true,
+    }
+```
+
+
+### Highlighter
+
+
+Write your code like this:
+
+    ```
+      var szhshp = 'cool';
+    ```
+
+Plugin will **auto** detect your language and highlight it.
+
+If you want to set the language manually:
+
+
+    ```js
+      var szhshp = 'cool';
+    ```
+
+
+And the code snippet will be highlighted as below:
+
+
+```js
+  var szhshp = 'cool';
+  var szhshp = 'awesome';
+```
+
+
+### headerNumber
+
+Add episode numbers for main headers
+
+![]( _media/post/headerNumber.png )
+
+
+### md-post-header-collapse
+
+Realized with this repo: [    szhielelp/md-post-header-collapse  ](https://github.com/szhielelp/md-post-header-collapse)
+
+Run `$.headerCollapseRobot()` after post loaded.
+
+```js
+    $.headerCollapseRobot('#page-content', ['h1', 'h2', 'h3'], ['blockquote']);
+```
+
+![]( _media/post/headerCollapse.png )
+
+You can try clicking on the icons near titles.
+
+
+### Reading Progressbar
+
+Inspired from [http://es6.ruanyifeng.com/#docs/promise](http://es6.ruanyifeng.com/#docs/promise)
+
+![]( _media/post/progressbar.png )
+
+It will show your reading progress for current post.
+
+
+### Picture Lightbox 
+
+A plugin for better experience of displaying pictures.
+
+
+![]( _media/post/lightbox.png )
 
 
 
+Example Usage:
 
+```
+  ![](path_to_image)
+
+
+  ![](path_to_image)
+  *Here is desc*
+```
+
+## Trouble Shooting
+
+I'm trying to keep this project as simple as possible, but if you still get stuck into any problem, please raise a issue in [Github](https://github.com/szhielelp/JekyllTheme-ProjectGaia). I may check it if I got time.
+
+
+## License
+
+MIT
+
+## Donate
+
+[   Donate via Alipay    ](http://szhshp.org/about.html)
 
 ## Change Log
 
-- **Oct 18th 2019**
-Version 2 Beta Released!! Check it out -> [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-
-- **Mar 3rd 2018**
-Fixed critical styles issues
-
-- **Mar 1st 2018**
-Updated sidebar to a smooth style.
-
-- **Dec 20th 2017**
-Integrated Lightbox
-
-- **Dec 19th 2017**
-Added post searchbox
-
-- **Aug 20th, 2017**
-Added post plugin configuration
-
-- **May 30th, 2017**
-Added a reading progressbar for post page.
-
-- **May 6th, 2017**
-Updated font page
-Added global font style
-
-- **Apr 3nd, 2017**
-Added new font
-
-- **Mar 5th, 2017**
-Style updated
-
-- **Mar 1st, 2017**
-TOC plugin updated
-
-- **Feb 28th, 2017**
-Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
+[    Change Log   ](https://github.com/szhielelp/JekyllTheme-ProjectGaia#change-log)
